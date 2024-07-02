@@ -136,14 +136,27 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "balanced";
-        };homerow: homerow {
+        };hrr:hrr {
       compatible = "zmk,behavior-hold-tap";
     
-         label = "HOMEROW";
+         label = "HRR";
          bindings = <&kp>, <&kp>;
          #binding-cells = <2>;
-         tapping-term-ms = <200>;
-         flavor = "tap-preferred";};
+         tapping-term-ms = <280>;
+         flavor = "tap-preferred";
+         quick-tap-ms = <175>;
+         require-prior-idle-ms = <150>;
+         hold-trigger-key-positions = <15 39 51 68 67 68 66 0 1 2 3 4 10 11 12 13 14 15 22 23 24 25 26 27 34 35 36 37 38 39 46 47 48 49 50 51 52 53 54 64 65 66 67 68 69 70 71 55 56 57 72 73 74>;};hrl: hrl {
+      compatible = "zmk,behavior-hold-tap";
+    
+         label = "HRL";
+         bindings = <&kp>, <&kp>;
+         #binding-cells = <2>;
+         tapping-term-ms = <280>;
+         flavor = "tap-preferred";
+         quick-tap-ms = <175>;
+         require-prior-idle-ms = <150>;
+         hold-trigger-key-positions = <8 9 16 17 18 19 20 21 28 29 30 31 32 33 40 41 42 43 44 45 52 53 54 55 56 57 58 59 60 61 62 63 70 71 72 73 74 75 76 77 78 79 5 6 7 69>;};
     };
 };
 
@@ -257,17 +270,19 @@
 / {
     
 behaviors {};
+
+behaviors {};
 keymap {
         compatible = "zmk,keymap";
 
         layer_Base {
             bindings = <
-&kp ESCAPE      &kp F2               &kp F3               &kp F4            &kp F5                                                                                                                  &kp F6                  &kp F7            &kp F8                &kp F9                         &kp F10
-&kp EQUAL       &kp N1               &kp N2               &kp N3            &kp N4                 &kp N5                                                                        &kp N6             &kp N7                  &kp N8            &kp N9                &kp N0                         &kp MINUS
-&kp TAB         &kp Q                &kp W                &kp E             &kp R                  &kp T                                                                         &kp Y              &kp U                   &kp I             &kp O                 &kp P                          &kp BSLH
-&kp GRAVE       &homerow LEFT_GUI A  &homerow LEFT_ALT S  &homerow LCTRL D  &homerow LEFT_SHIFT F  &kp G                                                                         &meh_behavior 0 H  &homerow RIGHT_SHIFT F  &homerow RCTRL K  &homerow RIGHT_ALT L  &homerow RIGHT_META SEMICOLON  &kp SQT
-&kp LEFT_SHIFT  &kp Z                &kp X                &kp C             &kp V                  &kp B   &mo 1      &to 3     &magic 2 0  &kp LGUI  &kp LS(LC(LALT))  &kp DEL  &kp N              &kp M                   &kp COMMA         &kp DOT               &kp FSLH                       &kp PG_UP
-&kp LCTRL       &kp HOME             &kp END              &kp LEFT          &kp RIGHT                      &kp SPACE  &kp BSPC  &kp LALT    &kp RALT  &kp TAB           &kp RET                     &kp UP                  &kp DOWN          &kp LBKT              &kp RBKT                       &kp PG_DN
+&kp ESCAPE      &kp F2           &kp F3           &kp F4        &kp F5                                                                                                              &kp F6              &kp F7        &kp F8            &kp F9                     &kp F10
+&kp EQUAL       &kp N1           &kp N2           &kp N3        &kp N4             &kp N5                                                                        &kp N6             &kp N7              &kp N8        &kp N9            &kp N0                     &kp MINUS
+&kp TAB         &kp Q            &kp W            &kp E         &kp R              &kp T                                                                         &kp Y              &kp U               &kp I         &kp O             &kp P                      &kp BSLH
+&kp GRAVE       &hrl LEFT_GUI A  &hrl LEFT_ALT S  &hrl LCTRL D  &hrl LEFT_SHIFT F  &kp G                                                                         &meh_behavior 0 H  &hrr RIGHT_SHIFT J  &hrr RCTRL K  &hrr RIGHT_ALT L  &hrr RIGHT_META SEMICOLON  &kp SQT
+&kp LEFT_SHIFT  &kp Z            &kp X            &kp C         &kp V              &kp B   &mo 1      &to 3     &magic 2 0  &kp LGUI  &kp LS(LC(LALT))  &kp DEL  &kp N              &kp M               &kp COMMA     &kp DOT           &kp FSLH                   &kp PG_UP
+&kp LCTRL       &kp HOME         &kp END          &kp LEFT      &kp RIGHT                  &kp SPACE  &kp BSPC  &kp LALT    &kp RALT  &kp TAB           &kp RET                     &kp UP              &kp DOWN      &kp LBKT          &kp RBKT                   &kp PG_DN
 >;
         };
 
