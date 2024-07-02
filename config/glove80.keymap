@@ -127,18 +127,8 @@ hr:hr {
          label = "HR";
          bindings = <&kp>, <&kp>;
          #binding-cells = <2>;
-         tapping-term-ms = <200>;
+         tapping-term-ms = <300>;
          flavor = "tap-preferred";
-         quick-tap-ms = <0>;require-prior-idle-ms = <(-1)>;};hrl: hrl {
-      compatible = "zmk,behavior-hold-tap";
-    
-         label = "HRL";
-         bindings = <&kp>, <&kp>;
-         #binding-cells = <2>;
-         tapping-term-ms = <200>;
-         flavor = "tap-preferred";
-         quick-tap-ms = <200>;
-         require-prior-idle-ms = <125>;};
     };
 };
 
@@ -251,6 +241,8 @@ hr:hr {
 
 / {
     
+behaviors {};
+
 behaviors {};
 
 behaviors {};
