@@ -123,13 +123,12 @@
         };
 hr:hr {
       compatible = "zmk,behavior-hold-tap";
-    
          label = "HR";
          bindings = <&kp>, <&kp>;
          #binding-cells = <2>;
          tapping-term-ms = <300>;
          flavor = "tap-preferred";
-    };
+        quick-tap-ms = <0>;
 };
 
 /* #define for key positions */
