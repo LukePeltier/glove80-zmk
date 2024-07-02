@@ -100,7 +100,6 @@
             #binding-cells = <0>;
             bindings = <&out OUT_BLE &bt BT_SEL 3>;
         };
-
     };
 
     #else
@@ -121,12 +120,14 @@
             tapping-term-ms = <200>;
             bindings = <&mo>, <&rgb_ug_status_macro>;
         };
-        hr:hr {
+
+        hr: hr {
             compatible = "zmk,behavior-hold-tap";
             label = "HR";
             bindings = <&kp>, <&kp>;
+
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <250>;
             flavor = "tap-preferred";
         };
     };
@@ -240,37 +241,52 @@
 /* Automatically generated keymap */
 
 / {
-    
-behaviors {};
+    behaviors {
+    };
 
-behaviors {};
+    behaviors {
+    };
 
-behaviors {};
+    behaviors {
+    };
 
-behaviors {};
+    behaviors {
+    };
 
-behaviors {};
+    behaviors {
+    };
 
-behaviors {};
+    behaviors {
+    };
 
-behaviors {};
+    behaviors {
+    };
 
-behaviors {};
+    behaviors {
+    };
 
-behaviors {};
+    behaviors {
+    };
 
-behaviors {};
+    behaviors {
+    };
 
-behaviors {};
+    behaviors {
+    };
 
-behaviors {};
+    behaviors {
+    };
 
-behaviors {};
+    behaviors {
+    };
 
-behaviors {};
+    behaviors {
+    };
 
-behaviors {};
-keymap {
+    behaviors {
+    };
+
+    keymap {
         compatible = "zmk,keymap";
 
         layer_Base {
@@ -281,7 +297,7 @@ keymap {
 &kp GRAVE       &hr LGUI A  &hr LEFT_ALT S  &hr LEFT_SHIFT D  &hr LEFT_CONTROL F  &kp G                                                                           &kp H   &hr RCTRL J  &hr RIGHT_SHIFT K  &hr LEFT_ALT L  &hr RMETA SEMICOLON  &kp SQT
 &kp LEFT_SHIFT  &kp Z       &kp X           &kp C             &kp V               &kp B   &mo 1      &to 3     &magic 2 0    &kp LGUI  &kp LS(LC(LALT))  &kp DEL  &kp N   &kp M        &kp COMMA          &kp DOT         &kp FSLH             &kp PG_UP
 &kp LCTRL       &kp HOME    &kp END         &kp LEFT          &kp RIGHT                   &kp SPACE  &kp BSPC  &kp LEFT_GUI  &kp RALT  &kp TAB           &kp RET          &kp UP       &kp DOWN           &kp LBKT        &kp RBKT             &kp PG_DN
->;
+            >;
         };
 
         layer_Lower {
@@ -292,7 +308,7 @@ keymap {
 &trans                &none         &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp PG_UP                                                  &kp PERCENT            &kp KP_N4   &kp KP_N5     &kp KP_N6     &kp KP_PLUS      &none
 &trans                &kp K_APP     &none           &kp F11         &kp F12          &kp PG_DN  &trans  &trans  &to 0   &trans  &trans  &trans  &kp COMMA              &kp KP_N1   &kp KP_N2     &kp KP_N3     &kp KP_ENTER     &trans
 &magic LAYER_Magic 0  &caps_word    &kp INS         &kp F11         &kp F12                     &trans  &trans  &trans  &trans  &trans  &trans                         &kp KP_N0   &kp KP_N0     &kp KP_DOT    &kp KP_ENTER     &trans
->;
+            >;
         };
 
         layer_Magic {
@@ -303,7 +319,7 @@ keymap {
 &bootloader  &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_BRD  &rgb_ug RGB_EFF                                                   &none  &none  &none  &none  &none  &bootloader
 &sys_reset   &none            &none            &none            &none            &none            &bt_2  &bt_3  &none         &none  &none  &none  &none  &none  &none  &none  &none  &sys_reset
 &none        &none            &none            &none            &none                             &bt_0  &bt_1  &out OUT_USB  &none  &none  &none         &none  &none  &none  &none  &none
->;
+            >;
         };
 
         layer_Gaming {
@@ -314,7 +330,7 @@ keymap {
 &none           &none      &kp A     &kp S      &kp D   &kp F                                                                             &kp T   &kp Y   &kp U   &kp I      &kp O       &kp P
 &kp LEFT_SHIFT  &kp LSHFT  &kp Z     &kp X      &kp C   &kp V   &kp ESC    &kp RET   &kp PAUSE_BREAK  &kp BSPC           &kp DEL  &trans  &kp G   &kp H   &kp J   &kp K      &kp L       &kp SEMI
 &kp LCTRL       &kp LCTRL  &kp LEFT  &kp RIGHT  &kp B           &kp SPACE  &kp LALT  &kp LGUI         &tog LAYER_Gaming  &trans   &trans          &trans  &trans  &trans     &trans      &trans
->;
+            >;
         };
     };
 
