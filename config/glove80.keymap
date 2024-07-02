@@ -136,7 +136,14 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "balanced";
-        };
+        };homerow: homerow {
+      compatible = "zmk,behavior-hold-tap";
+    
+         label = "HOMEROW";
+         bindings = <&kp>, <&kp>;
+         #binding-cells = <2>;
+         tapping-term-ms = <100>;
+         flavor = "tap-preferred";};
     };
 };
 
@@ -252,13 +259,13 @@
 
         layer_Base {
             bindings = <
-&kp ESCAPE      &kp F2          &kp F3          &kp F4       &kp F5                                                                                                             &kp F6             &kp F7       &kp F8           &kp F9                    &kp F10
-&kp EQUAL       &kp N1          &kp N2          &kp N3       &kp N4            &kp N5                                                                        &kp N6             &kp N7             &kp N8       &kp N9           &kp N0                    &kp MINUS
-&kp TAB         &kp Q           &kp W           &kp E        &kp R             &kp T                                                                         &kp Y              &kp U              &kp I        &kp O            &kp P                     &kp BSLH
-&kp GRAVE       &mt LEFT_GUI A  &mt LEFT_ALT S  &mt LCTRL D  &mt LEFT_SHIFT F  &kp G                                                                         &meh_behavior 0 H  &mt RIGHT_SHIFT J  &mt RCTRL K  &mt RIGHT_ALT L  &mt RIGHT_META SEMICOLON  &kp SQT
-&kp LEFT_SHIFT  &kp Z           &kp X           &kp C        &kp V             &kp B   &mo 1      &to 3     &magic 2 0  &kp LGUI  &kp LS(LC(LALT))  &kp DEL  &kp N              &kp M              &kp COMMA    &kp DOT          &kp FSLH                  &kp PG_UP
-&kp LCTRL       &kp HOME        &kp END         &kp LEFT     &kp RIGHT                 &kp SPACE  &kp BSPC  &kp LALT    &kp RALT  &kp TAB           &kp RET                     &kp UP             &kp DOWN     &kp LBKT         &kp RBKT                  &kp PG_DN
-            >;
+&kp ESCAPE      &kp F2               &kp F3               &kp F4            &kp F5                                                                                                                  &kp F6                  &kp F7            &kp F8                &kp F9                         &kp F10
+&kp EQUAL       &kp N1               &kp N2               &kp N3            &kp N4                 &kp N5                                                                        &kp N6             &kp N7                  &kp N8            &kp N9                &kp N0                         &kp MINUS
+&kp TAB         &kp Q                &kp W                &kp E             &kp R                  &kp T                                                                         &kp Y              &kp U                   &kp I             &kp O                 &kp P                          &kp BSLH
+&kp GRAVE       &homerow LEFT_GUI A  &homerow LEFT_ALT S  &homerow LCTRL D  &homerow LEFT_SHIFT F  &kp G                                                                         &meh_behavior 0 H  &homerow RIGHT_SHIFT F  &homerow RCTRL K  &homerow RIGHT_ALT L  &homerow RIGHT_META SEMICOLON  &kp SQT
+&kp LEFT_SHIFT  &kp Z                &kp X                &kp C             &kp V                  &kp B   &mo 1      &to 3     &magic 2 0  &kp LGUI  &kp LS(LC(LALT))  &kp DEL  &kp N              &kp M                   &kp COMMA         &kp DOT               &kp FSLH                       &kp PG_UP
+&kp LCTRL       &kp HOME             &kp END              &kp LEFT          &kp RIGHT                      &kp SPACE  &kp BSPC  &kp LALT    &kp RALT  &kp TAB           &kp RET                     &kp UP                  &kp DOWN          &kp LBKT              &kp RBKT                       &kp PG_DN
+>;
         };
 
         layer_Lower {
@@ -269,7 +276,7 @@
 &trans                &none         &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp PG_UP                                                  &kp PERCENT            &kp KP_N4   &kp KP_N5     &kp KP_N6     &kp KP_PLUS      &none
 &trans                &kp K_APP     &none           &kp F11         &kp F12          &kp PG_DN  &trans  &trans  &to 0   &trans  &trans  &trans  &kp COMMA              &kp KP_N1   &kp KP_N2     &kp KP_N3     &kp KP_ENTER     &trans
 &magic LAYER_Magic 0  &caps_word    &kp INS         &kp F11         &kp F12                     &trans  &trans  &trans  &trans  &trans  &trans                         &kp KP_N0   &kp KP_N0     &kp KP_DOT    &kp KP_ENTER     &trans
-            >;
+>;
         };
 
         layer_Magic {
@@ -280,7 +287,7 @@
 &bootloader  &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_BRD  &rgb_ug RGB_EFF                                                   &none  &none  &none  &none  &none  &bootloader
 &sys_reset   &none            &none            &none            &none            &none            &bt_2  &bt_3  &none         &none  &none  &none  &none  &none  &none  &none  &none  &sys_reset
 &none        &none            &none            &none            &none                             &bt_0  &bt_1  &out OUT_USB  &none  &none  &none         &none  &none  &none  &none  &none
-            >;
+>;
         };
 
         layer_Gaming {
@@ -291,7 +298,7 @@
 &none           &none      &kp A     &kp S      &kp D   &kp F                                                                             &kp T   &kp Y   &kp U   &kp I      &kp O       &kp P
 &kp LEFT_SHIFT  &kp LSHFT  &kp Z     &kp X      &kp C   &kp V   &kp ESC    &kp RET   &kp PAUSE_BREAK  &kp BSPC           &kp DEL  &trans  &kp G   &kp H   &kp J   &kp K      &kp L       &kp SEMI
 &kp LCTRL       &kp LCTRL  &kp LEFT  &kp RIGHT  &kp B           &kp SPACE  &kp LALT  &kp LGUI         &tog LAYER_Gaming  &trans   &trans          &trans  &trans  &trans     &trans      &trans
-            >;
+>;
         };
     };
 
